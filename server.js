@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 //bring routes
-const blogRoutes = require('./routes/blog');
+const blogRoutes = require('./src/routes/blog');
 
 // app
 const app = express();
