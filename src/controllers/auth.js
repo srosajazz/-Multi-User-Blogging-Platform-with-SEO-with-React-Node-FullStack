@@ -60,3 +60,16 @@ exports.signin = (req, res) => {
     });
   });
 };
+
+//signout
+exports.signout = (req, res) => {
+  res.clearCookie('token');
+  res.json({
+    message: 'Signout success',
+  });
+};
+
+//TOKEN EXPIRE
+exports.requireSignin = expressJwt({
+  secret: process.env.JWT_SECRET,
+});
